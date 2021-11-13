@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+
+# Propertie files
 *.properties
 
 # Log file
