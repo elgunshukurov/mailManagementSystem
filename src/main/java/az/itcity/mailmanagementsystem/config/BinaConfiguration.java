@@ -1,4 +1,4 @@
-package config;
+package az.itcity.mailmanagementsystem.config;
 
 //import az.itcity.bina.domain.Balance;
 import lombok.Data;

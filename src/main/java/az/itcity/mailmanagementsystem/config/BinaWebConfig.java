@@ -1,4 +1,4 @@
-package config;
+package az.itcity.mailmanagementsystem.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
