@@ -14,7 +14,7 @@ import java.util.Map;
 @Data
 @Configuration
 @ConfigurationProperties("bina")
-public class BinaConfiguration {
+public class MMSConfiguration {
 
     private String baseUrl;
     private String registerUrl;
