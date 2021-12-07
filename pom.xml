@@ -18,6 +18,7 @@
         <mapstruct.version>1.4.1.Final</mapstruct.version>
         <lombok.version>1.18.20</lombok.version>
     </properties>
+    <packaging>war</packaging>
     <dependencies>
         <!-- spring paketine aid dependenciler -->
         <dependency>

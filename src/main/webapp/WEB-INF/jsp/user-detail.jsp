@@ -20,10 +20,10 @@
     <c:choose>
         <c:when test="${not empty user}">
             <h2>Employee Profile</h2>
-            ID: ${employee.id} <br/>
-            Name: ${employee.name} <br/>
-            Surname: ${employee.surname} <br/>
-            Salary: ${employee.salary} <br/>
+            ID: ${user.id} <br/>
+            Name: ${user.name} <br/>
+            Surname: ${user.surname} <br/>
+            Mail: ${mail.mail_address} <br/>
         </c:when>
         <c:otherwise>
             <h2>User not found!</h2>

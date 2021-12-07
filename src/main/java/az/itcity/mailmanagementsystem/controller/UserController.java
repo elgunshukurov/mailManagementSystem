@@ -1,5 +1,6 @@
 package az.itcity.mailmanagementsystem.controller;
 
+import az.itcity.mailmanagementsystem.entity.Mail;
 import az.itcity.mailmanagementsystem.entity.User;
 import az.itcity.mailmanagementsystem.repository.jpa.MailRepository;
 import az.itcity.mailmanagementsystem.repository.jpa.UserRepository;
@@ -25,7 +26,7 @@ public class UserController {
     @GetMapping
     public ModelAndView viewUsers() {
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("user-detail");
+        mav.setViewName("users");
         mav.addObject("user",userRepository.findAll());
         mav.addObject("mail",mailRepository.findAll());
         return mav;
@@ -38,6 +39,9 @@ public class UserController {
         try {
             Optional<User> optionalUser = userRepository.findById(id);
             optionalUser.ifPresent(user -> modelAndView.addObject("user", user));
+
+            Optional<Mail> optionalMail = mailRepository.findByUser(optionalUser);
+            optionalMail.ifPresent(mail -> modelAndView.addObject("mail",mail));
         } catch (ResourceNotFound e) {
             System.out.println("user tapilmadi " + e.getMessage());
         }
